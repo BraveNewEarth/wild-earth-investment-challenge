@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Earth Investment Challenge - Strategic Impact Platform</title>
+    <meta name="description" content="Pioneer investment in Earth-based economy. Join visionary investors funding 60 years of proven innovation in regenerative education, sustainable communities, and climate-smart agriculture.">
+    <meta name="keywords" content="impact investing, regenerative agriculture, sustainable education, philanthropic giving, environmental investment">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Primary Earth-based green with financial trust ocean palette */
+            --primary-green: #059669;
+            --green-light: #10b981;
+            --green-dark: #047857;
+            --green-darker: #064e3b;
+            
+            /* Financial trust ocean palette */
+            --trust-blue: #3B82F6;
+            --blue-900: #1e3a8a;
+            --blue-700: #1d4ed8;
+            --cyan-500: #06b6d4;
+            --teal-400: #2dd4bf;
+            
+            /* Material Design adaptive backgrounds */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --bg-dark: #0f172a;
+            
+            /* Text colors */
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-tertiary: #64748b;
+            
+            /* Material Design elevation shadows */
+            --elevation-1: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+            --elevation-2: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+            --elevation-3: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+            --elevation-4: 0px 14px 28px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.22);
+            --elevation-6: 0px 20px 40px rgba(0, 0, 0, 0.30), 0px 14px 14px rgba(0, 0, 0, 0.22);
+            
+            /* Financial-grade borders */
+            --border-light: rgba(5, 150, 105, 0.12);
+            --border-medium: rgba(5, 150, 105, 0.24);
+            --border-strong: rgba(5, 150, 105, 0.48);
+            
+            /* Material Design spacing */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            
+            /* Tablet-optimized touch targets */
+            --touch-target-sm: 44px;
+            --touch-target-md: 48px;
+            --touch-target-lg: 56px;
+            
+            /* Border radius */
+            --radius-xs: 4px;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            font-size: 16px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-light);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: var(--elevation-2);
+            backdrop-filter: blur(20px);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-md) var(--space-xl);
+            min-height: var(--touch-target-lg);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-green), var(--trust-blue));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: var(--elevation-2);
+        }
+
+        .header-cta {
+            background: linear-gradient(135deg, var(--primary-green), var(--green-dark));
+            color: white;
+            padding: var(--space-md) var(--space-xl);
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--elevation-2);
+            min-height: var(--touch-target-md);
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--elevation-4);
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: calc(var(--touch-target-lg) + var(--space-xl)) var(--space-xl) var(--space-xl);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+            padding: var(--space-3xl) 0;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-medium);
+            color: var(--primary-green);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-xl);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--space-2xl);
+            box-shadow: var(--elevation-1);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-green), var(--trust-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-lg);
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto var(--space-2xl);
+            line-height: 1.5;
+        }
+
+        /* Hero Stats Grid - 2 rows x 3 columns */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: var(--space-lg);
+            margin: var(--space-2xl) auto;
+            max-width: 900px;
+        }
+
+        .stat-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl) var(--space-lg);
+            text-align: center;
+            box-shadow: var(--elevation-2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--trust-blue));
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--elevation-4);
+            border-color: var(--border-medium);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-green), var(--trust-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: var(--space-sm);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Challenge Overview */
+        .challenge-section {
+            background: linear-gradient(135deg, var(--primary-green), var(--trust-blue));
+            border-radius: var(--radius-xl);
+            padding: var(--space-3xl);
+            text-align: center;
+            margin: var(--space-3xl) 0;
+            box-shadow: var(--elevation-6);
+            color: white;
+        }
+
+        .challenge-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+        }
+
+        .challenge-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: var(--space-2xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .funding-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
+        }
+
+        .funding-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            backdrop-filter: blur(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .funding-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .funding-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+        }
+
+        .funding-label {
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* Four Regenerative Models Section - 2x2 Grid */
+        .models-section {
+            margin: var(--space-3xl) 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+            background: linear-gradient(135deg, var(--primary-green), var(--trust-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .model-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--elevation-2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .model-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--elevation-6);
+            border-color: var(--border-strong);
+        }
+
+        .model-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-green), var(--trust-blue));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--elevation-2);
+        }
+
+        .model-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .model-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        /* Larry's Vision Timeline - Improved Design */
+        .vision-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            padding: var(--space-3xl);
+            margin: var(--space-3xl) 0;
+            box-shadow: var(--elevation-1);
+        }
+
+        .vision-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+
+        .vision-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+        }
+
+        .vision-highlight {
+            background: linear-gradient(135deg, var(--primary-green), var(--trust-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .vision-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+        }
+
+        /* Improved Timeline Design */
+        .timeline-container {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--elevation-2);
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            color: var(--primary-green);
+        }
+
+        .timeline-years {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-green), var(--trust-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .timeline-events {
+            position: relative;
+        }
+
+        .timeline-events::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary-green), var(--trust-blue));
+        }
+
+        .timeline-event {
+            position: relative;
+            padding-left: var(--space-3xl);
+            margin-bottom: var(--space-lg);
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            background: var(--primary-green);
+            border: 3px solid var(--bg-primary);
+            border-radius: 50%;
+            box-shadow: var(--elevation-2);
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--primary-green);
+            font-size: 1.1rem;
+        }
+
+        .timeline-text {
+            color: var(--text-secondary);
+            margin-top: var(--space-xs);
+        }
+
+        /* Impact Legacy */
+        .impact-section {
+            margin: var(--space-3xl) 0;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .impact-card {
+            background: linear-gradient(135deg, var(--primary-green), var(--trust-blue));
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            text-align: center;
+            box-shadow: var(--elevation-4);
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .impact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--elevation-6);
+        }
+
+        .impact-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: var(--space-sm);
+        }
+
+        .impact-label {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-secondary);
+            border: 2px solid var(--primary-green);
+            border-radius: var(--radius-xl);
+            padding: var(--space-3xl);
+            text-align: center;
+            margin: var(--space-3xl) 0;
+            box-shadow: var(--elevation-3);
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            color: var(--primary-green);
+        }
+
+        .contact-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-cta {
+            background: linear-gradient(135deg, var(--primary-green), var(--green-dark));
+            color: white;
+            padding: var(--space-lg) var(--space-2xl);
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--elevation-3);
+            margin: var(--space-xl) 0;
+            min-height: var(--touch-target-lg);
+        }
+
+        .contact-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--elevation-6);
+        }
+
+        .contact-info {
+            color: var(--text-secondary);
+            margin-top: var(--space-lg);
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+            
+            .models-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .vision-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 1fr);
+            }
+            
+            .funding-breakdown {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Professional animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🌱</div>
+                Wild Earth Institute
+            </div>
+            <button class="header-cta" onclick="scrollToContact()">
+                Transform the Future
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section fade-in">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Pioneer Investment in Earth-Based Economy
+            </div>
+            
+            <h1 class="hero-title">
+                Earth-Based Models for Regenerative Living
+            </h1>
+            
+            <p class="hero-subtitle">
+                While others build digital unicorns, you could fund the next evolution in education, community, and regenerative agriculture across 282+ strategic acres that will influence generations.
+            </p>
+
+            <!-- Hero Stats Grid - 2 rows x 3 columns -->
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">282+</div>
+                    <div class="stat-label">Strategic Acres</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">60</div>
+                    <div class="stat-label">Years Proven Vision</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4,000</div>
+                    <div class="stat-label">Protected Buffer Acres</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">11+</div>
+                    <div class="stat-label">Global Network Partners</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Generational Impact</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1733</div>
+                    <div class="stat-label">Oldest Farm Restoration</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Overview -->
+        <section class="challenge-section fade-in">
+            <h2 class="challenge-title">$1M Philanthropic Challenge</h2>
+            <p class="challenge-subtitle">
+                Tax-deductible gift positioning for permanent, generational change through proven regenerative models
+            </p>
+            
+            <div class="funding-breakdown">
+                <div class="funding-item">
+                    <div class="funding-amount">$335K</div>
+                    <div class="funding-label">Sacred Earth Cottage (ROFR)</div>
+                </div>
+                <div class="funding-item">
+                    <div class="funding-amount">$525K</div>
+                    <div class="funding-label">Global Roots Farm</div>
+                </div>
+                <div class="funding-item">
+                    <div class="funding-amount">$140K</div>
+                    <div class="funding-label">Infrastructure & Operations</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Four Regenerative Models - 2x2 Grid -->
+        <section class="models-section fade-in">
+            <h2 class="section-title">Four Integrated Regenerative Models</h2>
+            
+            <div class="models-grid">
+                <div class="model-card">
+                    <div class="model-icon">🎓</div>
+                    <h3 class="model-title">University of the Wild</h3>
+                    <p class="model-description">
+                        Transforming higher education through Earth-based, self-directed learning with UMass partnership providing academic credibility and addressing 21st-century skills gap.
+                    </p>
+                </div>
+
+                <div class="model-card">
+                    <div class="model-icon">🏘️</div>
+                    <h3 class="model-title">Wild Earth Ecovillage</h3>
+                    <p class="model-description">
+                        Demonstrating sustainable community living with net-zero facilities, permaculture, and cooperative governance models as a living laboratory.
+                    </p>
+                </div>
+
+                <div class="model-card">
+                    <div class="model-icon">🌾</div>
+                    <h3 class="model-title">Global Roots Farm</h3>
+                    <p class="model-description">
+                        228-acre regenerative agriculture enterprise providing local food security and climate-smart farming education with indigenous partnership.
+                    </p>
+                </div>
+
+                <div class="model-card">
+                    <div class="model-icon">🌍</div>
+                    <h3 class="model-title">WECHI International</h3>
+                    <p class="model-description">
+                        <strong>Wild Earth Communities & Households International</strong> - Global network of 11+ founding communities practicing ecological living with scalable replication models.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Larry's Vision Timeline -->
+        <section class="vision-section fade-in">
+            <div class="vision-content">
+                <div class="vision-text">
+                    <h2>
+                        <span class="vision-highlight">Larry's 60-Year Journey</span><br>
+                        Securing the Legacy
+                    </h2>
+                    <p class="vision-description">
+                        In 1964, 21-year-old Larry Buell received a transformational vision in the Massachusetts woods. Now, as he enters his "Twilight Phase," this presents a unique opportunity for visionary philanthropists to secure and scale this proven legacy.
+                    </p>
+                    <p class="vision-description">
+                        <strong>The transition from scarcity to abundance mindset:</strong> While Earthlands operated under resource constraints, today's Wild Earth Institute has moved into a period of unprecedented opportunity with confirmed partnerships, proven demand, and strategic land access.
+                    </p>
+                </div>
+
+                <div class="timeline-container">
+                    <h3 class="timeline-title">60-Year Evolution</h3>
+                    <div class="timeline-years">1964 → 2025</div>
+                    
+                    <div class="timeline-events">
+                        <div class="timeline-event">
+                            <div class="timeline-year">1964</div>
+                            <div class="timeline-text">Original vision received</div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-year">1973</div>
+                            <div class="timeline-text">Wild Earth Institute founded</div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-year">1993</div>
+                            <div class="timeline-text">Earthlands Community</div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-year">2000</div>
+                            <div class="timeline-text">University of the Wild launched</div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-text">WECHI International Network</div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-text"><strong>Your Philanthropic Opportunity</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Your Legacy Impact - 2x2 Grid -->
+        <section class="impact-section fade-in">
+            <h2 class="section-title">Your Philanthropic Legacy</h2>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number">282+</div>
+                    <div class="impact-label">Acres Protected Forever</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">∞</div>
+                    <div class="impact-label">Students Educated</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">Global</div>
+                    <div class="impact-label">Communities Replicated</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">100%</div>
+                    <div class="impact-label">Tax Deductible</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Action -->
+        <section class="contact-section fade-in" id="contact">
+            <h2 class="contact-title">Ready to Transform the Future?</h2>
+            <p class="contact-subtitle">
+                Connect directly with Larry to discuss this once-in-a-lifetime philanthropic opportunity.
+            </p>
+            
+            <button class="contact-cta" onclick="window.location.href='mailto:Larry@UofWild.org'">
+                Contact Larry Directly
+            </button>
+            
+            <div class="contact-info">
+                <p><strong>Dr. Larry Buell, Founder</strong></p>
+                <p><a href="mailto:Larry@UofWild.org">Larry@UofWild.org</a></p>
+                <p><a href="tel:978-855-1420">(978) 855-1420</a></p>
+                <p><a href="https://www.UofWild.org" target="_blank">www.UofWild.org</a></p>
+                <p style="margin-top: var(--space-lg); font-style: italic;">
+                    "The question isn't whether regenerative education and sustainable communities are the future—it's whether you'll be remembered as the philanthropist who helped birth this transformation."
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scrolling
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Enhanced interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add intersection observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Add professional micro-interactions
+            document.querySelectorAll('.stat-card, .model-card, .impact-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-6px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Button ripple effect
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.style.position = 'absolute';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.pointerEvents = 'none';
+                    
+                    this.style.position = 'relative';
+                    this.style.overflow = 'hidden';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        if (ripple.parentNode) {
+                            ripple.remove();
+                        }
+                    }, 600);
+                });
+            });
+        });
+
+        // Add ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
